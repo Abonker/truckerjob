@@ -95,7 +95,7 @@ CreateThread(function()
                 -- Set return point blip
                 RemoveBlip(deliveryBlip)
                 deliveryBlip = nil
-                returnBlip = AddBlipForCoord(vector3(1204.6064453125, -3116.6423339844, 5.5403246879578))
+                returnBlip = AddBlipForCoord(vector3(1196.337890625, -3103.4169921875, 6.0280237197876))
                 SetBlipRoute(returnBlip, true)
                 BeginTextCommandSetBlipName("STRING")
                 AddTextComponentString("Park here to finish the job")
@@ -104,7 +104,7 @@ CreateThread(function()
         elseif waiting then
             local playerCoords = GetEntityCoords(PlayerPedId())
             -- Check if the player is at the parking location to complete the job
-            if #(playerCoords - vector3(1204.6064453125, -3116.6423339844, 5.5403246879578)) < 5.0 then
+            if #(playerCoords - vector3(1196.337890625, -3103.4169921875, 6.0280237197876)) < 5.0 then
                 ESX.ShowNotification("You successfully completed the job!")
                 RemoveBlip(returnBlip)
                 returnBlip = nil
